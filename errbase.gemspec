@@ -29,4 +29,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "raygun4ruby"
   spec.add_development_dependency "sentry-raven"
   spec.add_development_dependency "bugsnag"
+  spec.add_development_dependency "appsignal"
 end

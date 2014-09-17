@@ -9,3 +9,4 @@ require "honeybadger"
 # require "raygun4ruby" # raises exception when not configured
 require "sentry-raven"
 require "bugsnag"
+require "appsignal"
