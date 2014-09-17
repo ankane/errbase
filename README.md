@@ -4,7 +4,7 @@ Common exception reporting for a variety of services
 
 Automatically detects reporting libraries
 
-Supports [Rollbar](https://rollbar.com/), [Airbrake](https://airbrake.io/), [Exceptional](http://www.exceptional.io/), [Honeybadger](https://www.honeybadger.io/), [Sentry](https://getsentry.com/), [Raygun](https://raygun.io/), and [Bugsnag](https://bugsnag.com/)
+Supports [Rollbar](https://rollbar.com/), [Airbrake](https://airbrake.io/), [Exceptional](http://www.exceptional.io/), [Honeybadger](https://www.honeybadger.io/), [Sentry](https://getsentry.com/), [Raygun](https://raygun.io/), [Bugsnag](https://bugsnag.com/) and [Appsignal](https://appsignal.com/)
 
 ```ruby
 begin

@@ -26,6 +26,9 @@ module Errbase
       if defined?(Bugsnag)
         Bugsnag.notify(e)
       end
+      if defined?(Appsignal)
+        Appsignal.send_exception(e)
+      end
     end
 
   end
