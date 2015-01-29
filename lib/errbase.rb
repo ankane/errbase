@@ -29,6 +29,9 @@ module Errbase
       if defined?(Appsignal)
         Appsignal.send_exception(e)
       end
+      if defined?(Opbeat)
+        Opbeat.capture_exception(e)
+      end
     end
 
   end
