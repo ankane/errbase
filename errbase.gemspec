@@ -1,15 +1,15 @@
 # coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
+lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'errbase/version'
+require "errbase/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "errbase"
   spec.version       = Errbase::VERSION
   spec.authors       = ["Andrew Kane"]
   spec.email         = ["andrew@chartkick.com"]
-  spec.summary       = %q{Common exception reporting for a variety of services}
-  spec.description   = %q{Common exception reporting for a variety of services}
+  spec.summary       = "Common exception reporting for a variety of services"
+  spec.description   = "Common exception reporting for a variety of services"
   spec.homepage      = "https://github.com/ankane/errbase"
   spec.license       = "MIT"
 
