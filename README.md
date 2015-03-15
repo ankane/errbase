@@ -1,10 +1,18 @@
 # Errbase
 
-Common exception reporting for a variety of services
+A common exception reporting library for a variety of services.
 
-Automatically detects reporting libraries
+Libraries are automatically detected. Supports:
 
-Supports [Rollbar](https://rollbar.com/), [Airbrake](https://airbrake.io/), [Exceptional](http://www.exceptional.io/), [Honeybadger](https://www.honeybadger.io/), [Sentry](https://getsentry.com/), [Raygun](https://raygun.io/), [Bugsnag](https://bugsnag.com/), [Appsignal](https://appsignal.com/) and [Opbeat](https://opbeat.com/) [master]
+- [Rollbar](https://rollbar.com/)
+- [Airbrake](https://airbrake.io/)
+- [Exceptional](http://www.exceptional.io/)
+- [Honeybadger](https://www.honeybadger.io/)
+- [Sentry](https://getsentry.com/)
+- [Raygun](https://raygun.io/)
+- [Bugsnag](https://bugsnag.com/)
+- [Appsignal](https://appsignal.com/)
+- [Opbeat](https://opbeat.com/)
 
 ```ruby
 begin
