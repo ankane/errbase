@@ -12,6 +12,7 @@ module Errbase
       Bugsnag.notify(e) if defined?(Bugsnag)
       Appsignal.send_exception(e) if defined?(Appsignal)
       Opbeat.capture_exception(e) if defined?(Opbeat)
+      PartyFoul::RacklessExceptionHandler.handle(e, {}) if defined?(PartyFoul)
     end
   end
 end
