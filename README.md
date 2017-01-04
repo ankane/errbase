@@ -4,15 +4,15 @@ A common exception reporting library for a variety of services.
 
 Libraries are automatically detected. Supports:
 
-- [Rollbar](https://rollbar.com/)
 - [Airbrake](https://airbrake.io/)
+- [Appsignal](https://appsignal.com/)
+- [Bugsnag](https://bugsnag.com/)
 - [Exceptional](http://www.exceptional.io/)
 - [Honeybadger](https://www.honeybadger.io/)
-- [Sentry](https://getsentry.com/)
-- [Raygun](https://raygun.io/)
-- [Bugsnag](https://bugsnag.com/)
-- [Appsignal](https://appsignal.com/)
 - [Opbeat](https://opbeat.com/)
+- [Raygun](https://raygun.io/)
+- [Rollbar](https://rollbar.com/)
+- [Sentry](https://getsentry.com/)
 
 ```ruby
 begin
