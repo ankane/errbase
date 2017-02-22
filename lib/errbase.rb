@@ -11,7 +11,14 @@ module Errbase
       Raven.capture_exception(e) if defined?(Raven)
       Bugsnag.notify(e) if defined?(Bugsnag)
       Appsignal.send_exception(e) if defined?(Appsignal)
-      Opbeat.capture_exception(e) if defined?(Opbeat)
+      if defined?(Opbeat)
+        if Opbeat.respond_to?(:report)
+          Opbeat.report(e)
+        else
+          Opbeat.capture_exception(e)
+        end
+      end
+      ExceptionNotifier.notify_exception(e) if defined?(ExceptionNotifier)
     end
   end
 end
