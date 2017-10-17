@@ -19,6 +19,7 @@ module Errbase
         end
       end
       ExceptionNotifier.notify_exception(e) if defined?(ExceptionNotifier)
+      Google::Cloud::ErrorReporting.report(e) if defined?(Google::Cloud::ErrorReporting)
     end
   end
 end

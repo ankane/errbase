@@ -32,4 +32,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "appsignal"
   spec.add_development_dependency "opbeat"
   spec.add_development_dependency "exception_notification"
+  spec.add_development_dependency "google-cloud-error_reporting"
 end

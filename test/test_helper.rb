@@ -12,3 +12,4 @@ require "bugsnag"
 require "appsignal"
 require "opbeat"
 require "exception_notification"
+# require "google/cloud/error_reporting" # raises exception when not configured
