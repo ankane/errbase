@@ -9,6 +9,7 @@ Libraries are automatically detected. Supports:
 - [Bugsnag](https://bugsnag.com/)
 - [Exceptional](http://www.exceptional.io/)
 - [Exception Notification](https://github.com/smartinez87/exception_notification) [master]
+- [Google Stackdriver](https://cloud.google.com/stackdriver/) [master]
 - [Honeybadger](https://www.honeybadger.io/)
 - [Opbeat](https://opbeat.com/)
 - [Raygun](https://raygun.io/)
@@ -25,7 +26,7 @@ end
 
 ## Installation
 
-Errbase works best as a dependency.
+Errbase is designed to be used as a dependency.
 
 Add this line to your gemspec:
 

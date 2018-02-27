@@ -1,3 +1,3 @@
-## 0.0.4 [unreleased]
+## 0.1.0 [unreleased]
 
-- Added support for Exception Notification
+- Added support for Exception Notification and Stackdriver
