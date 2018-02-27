@@ -8,8 +8,8 @@ Libraries are automatically detected. Supports:
 - [Appsignal](https://appsignal.com/)
 - [Bugsnag](https://bugsnag.com/)
 - [Exceptional](http://www.exceptional.io/)
-- [Exception Notification](https://github.com/smartinez87/exception_notification) [master]
-- [Google Stackdriver](https://cloud.google.com/stackdriver/) [master]
+- [Exception Notification](https://github.com/smartinez87/exception_notification)
+- [Google Stackdriver](https://cloud.google.com/stackdriver/)
 - [Honeybadger](https://www.honeybadger.io/)
 - [Opbeat](https://opbeat.com/)
 - [Raygun](https://raygun.io/)
