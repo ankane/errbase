@@ -20,6 +20,8 @@ module Errbase
       end
       ExceptionNotifier.notify_exception(e) if defined?(ExceptionNotifier)
       Google::Cloud::ErrorReporting.report(e) if defined?(Google::Cloud::ErrorReporting)
+    rescue => e
+      $stderr.puts "[errbase] Error reporting exception: #{e.class.name}: #{e.message}"
     end
   end
 end
