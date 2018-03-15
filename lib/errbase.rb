@@ -9,7 +9,7 @@ module Errbase
 
       if defined?(Bugsnag)
         Bugsnag.notify(e) do |report|
-          report.add_tab(:info, info) if info
+          report.add_tab(:info, info) if info.any?
         end
       end
 
