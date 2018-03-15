@@ -24,6 +24,12 @@ rescue => e
 end
 ```
 
+You can add extra context with: [master]
+
+```ruby
+Errbase.report(e, {username: "hello"})
+```
+
 ## Installation
 
 Errbase is designed to be used as a dependency.

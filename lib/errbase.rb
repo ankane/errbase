@@ -2,15 +2,29 @@ require "errbase/version"
 
 module Errbase
   class << self
-    def report(e)
-      Rollbar.error(e) if defined?(Rollbar)
-      Airbrake.notify(e) if defined?(Airbrake)
-      Honeybadger.notify(e) if defined?(Honeybadger)
+    def report(e, info = {})
+      Airbrake.notify(e, info) if defined?(Airbrake)
+
+      Appsignal.send_error(e, info) if defined?(Appsignal)
+
+      if defined?(Bugsnag)
+        Bugsnag.notify(e) do |report|
+          report.add_tab(:info, info) if info
+        end
+      end
+
+      ExceptionNotifier.notify_exception(e, data: info) if defined?(ExceptionNotifier)
+
+      # TODO remove in next version
+      # don't worry about adding info
       Exceptional.handle(e) if defined?(Exceptional)
-      Raygun.track_exception(e) if defined?(Raygun)
-      Raven.capture_exception(e) if defined?(Raven)
-      Bugsnag.notify(e) if defined?(Bugsnag)
-      Appsignal.send_exception(e) if defined?(Appsignal)
+
+      Honeybadger.notify(e, context: info) if defined?(Honeybadger)
+
+      # TODO add info
+      Google::Cloud::ErrorReporting.report(e) if defined?(Google::Cloud::ErrorReporting)
+
+      # TODO add info
       if defined?(Opbeat)
         if Opbeat.respond_to?(:report)
           Opbeat.report(e)
@@ -18,8 +32,12 @@ module Errbase
           Opbeat.capture_exception(e)
         end
       end
-      ExceptionNotifier.notify_exception(e) if defined?(ExceptionNotifier)
-      Google::Cloud::ErrorReporting.report(e) if defined?(Google::Cloud::ErrorReporting)
+
+      Raven.capture_exception(e, extra: info) if defined?(Raven)
+
+      Raygun.track_exception(e, custom_data: info) if defined?(Raygun)
+
+      Rollbar.error(e, info) if defined?(Rollbar)
     rescue => e
       $stderr.puts "[errbase] Error reporting exception: #{e.class.name}: #{e.message}"
     end
