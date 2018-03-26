@@ -7,7 +7,6 @@ Libraries are automatically detected. Supports:
 - [Airbrake](https://airbrake.io/)
 - [Appsignal](https://appsignal.com/)
 - [Bugsnag](https://bugsnag.com/)
-- [Exceptional](http://www.exceptional.io/)
 - [Exception Notification](https://github.com/smartinez87/exception_notification)
 - [Google Stackdriver](https://cloud.google.com/stackdriver/)
 - [Honeybadger](https://www.honeybadger.io/)
