@@ -19,6 +19,8 @@ module Errbase
       # don't worry about adding info
       Exceptional.handle(e) if defined?(Exceptional)
 
+      NewRelic::Agent.notice_error(e) if defined?(NewRelic::Agent)
+
       Honeybadger.notify(e, context: info) if defined?(Honeybadger)
 
       # TODO add info

@@ -12,4 +12,5 @@ require "bugsnag"
 require "appsignal"
 require "opbeat"
 require "exception_notification"
+require "newrelic_rpm"
 # require "google/cloud/error_reporting" # raises exception when not configured

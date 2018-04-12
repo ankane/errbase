@@ -14,6 +14,7 @@ Libraries are automatically detected. Supports:
 - [Raygun](https://raygun.io/)
 - [Rollbar](https://rollbar.com/)
 - [Sentry](https://getsentry.com/)
+- [New Relic](https://newrelic.com/)
 
 ```ruby
 begin
