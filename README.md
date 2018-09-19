@@ -24,7 +24,7 @@ rescue => e
 end
 ```
 
-You can add extra context with: [master]
+You can add extra context with:
 
 ```ruby
 Errbase.report(e, {username: "hello"})
@@ -39,11 +39,6 @@ Add this line to your gemspec:
 ```ruby
 spec.add_dependency "errbase"
 ```
-
-## TODO
-
-- Ability to specify services
-- Support for more services
 
 ## Contributing
 

@@ -1,6 +1,7 @@
-## 0.1.1 [unreleased]
+## 0.1.1
 
 - Added support for passing extra context
+- Added New Relic
 
 ## 0.1.0
 
