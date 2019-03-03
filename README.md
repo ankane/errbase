@@ -11,7 +11,6 @@ Libraries are automatically detected. Supports:
 - [Google Stackdriver](https://cloud.google.com/stackdriver/)
 - [Honeybadger](https://www.honeybadger.io/)
 - [New Relic](https://newrelic.com/)
-- [Opbeat](https://opbeat.com/)
 - [Raygun](https://raygun.io/)
 - [Rollbar](https://rollbar.com/)
 - [Sentry](https://getsentry.com/)

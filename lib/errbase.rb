@@ -27,7 +27,8 @@ module Errbase
       # TODO add info
       NewRelic::Agent.notice_error(e) if defined?(NewRelic::Agent)
 
-      # TODO add info
+      # TODO remove in next version
+      # don't worry about adding info
       if defined?(Opbeat)
         if Opbeat.respond_to?(:report)
           Opbeat.report(e)
