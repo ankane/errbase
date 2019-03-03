@@ -13,19 +13,19 @@ module Errbase
         end
       end
 
-      ExceptionNotifier.notify_exception(e, data: info) if defined?(ExceptionNotifier)
-
       # TODO remove in next version
       # don't worry about adding info
       Exceptional.handle(e) if defined?(Exceptional)
 
+      ExceptionNotifier.notify_exception(e, data: info) if defined?(ExceptionNotifier)
+
       # TODO add info
-      NewRelic::Agent.notice_error(e) if defined?(NewRelic::Agent)
+      Google::Cloud::ErrorReporting.report(e) if defined?(Google::Cloud::ErrorReporting)
 
       Honeybadger.notify(e, context: info) if defined?(Honeybadger)
 
       # TODO add info
-      Google::Cloud::ErrorReporting.report(e) if defined?(Google::Cloud::ErrorReporting)
+      NewRelic::Agent.notice_error(e) if defined?(NewRelic::Agent)
 
       # TODO add info
       if defined?(Opbeat)
