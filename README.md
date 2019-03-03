@@ -10,11 +10,11 @@ Libraries are automatically detected. Supports:
 - [Exception Notification](https://github.com/smartinez87/exception_notification)
 - [Google Stackdriver](https://cloud.google.com/stackdriver/)
 - [Honeybadger](https://www.honeybadger.io/)
+- [New Relic](https://newrelic.com/)
 - [Opbeat](https://opbeat.com/)
 - [Raygun](https://raygun.io/)
 - [Rollbar](https://rollbar.com/)
 - [Sentry](https://getsentry.com/)
-- [New Relic](https://newrelic.com/)
 
 ```ruby
 begin
@@ -29,6 +29,8 @@ You can add extra context with:
 ```ruby
 Errbase.report(e, {username: "hello"})
 ```
+
+> Context is not supported for Google Stackdriver, New Relic, and Opbeat yet
 
 ## Installation
 
