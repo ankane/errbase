@@ -1,6 +1,7 @@
 ## 0.2.0 [unreleased]
 
 - Added context to New Relic
+- Removed support for Exceptional and Opbeat
 
 ## 0.1.1
 

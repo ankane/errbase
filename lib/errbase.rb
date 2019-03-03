@@ -13,10 +13,6 @@ module Errbase
         end
       end
 
-      # TODO remove in next version
-      # don't worry about adding info
-      Exceptional.handle(e) if defined?(Exceptional)
-
       ExceptionNotifier.notify_exception(e, data: info) if defined?(ExceptionNotifier)
 
       # TODO add info
@@ -25,16 +21,6 @@ module Errbase
       Honeybadger.notify(e, context: info) if defined?(Honeybadger)
 
       NewRelic::Agent.notice_error(e, custom_params: info) if defined?(NewRelic::Agent)
-
-      # TODO remove in next version
-      # don't worry about adding info
-      if defined?(Opbeat)
-        if Opbeat.respond_to?(:report)
-          Opbeat.report(e)
-        else
-          Opbeat.capture_exception(e)
-        end
-      end
 
       Raven.capture_exception(e, extra: info) if defined?(Raven)
 
