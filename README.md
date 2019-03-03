@@ -1,6 +1,6 @@
 # Errbase
 
-A common exception reporting library for a variety of services.
+Common exception reporting for a variety of services
 
 Libraries are automatically detected. Supports:
 
