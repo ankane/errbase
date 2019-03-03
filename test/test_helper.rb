@@ -2,6 +2,8 @@ require "bundler/setup"
 Bundler.require(:default)
 require "minitest/autorun"
 require "minitest/pride"
+
+# exception reporting libraries
 require "airbrake"
 require "appsignal"
 require "bugsnag"
