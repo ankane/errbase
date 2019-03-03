@@ -1,3 +1,7 @@
+## 0.2.0 [unreleased]
+
+- Added context to New Relic
+
 ## 0.1.1
 
 - Added support for passing extra context

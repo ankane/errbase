@@ -24,8 +24,7 @@ module Errbase
 
       Honeybadger.notify(e, context: info) if defined?(Honeybadger)
 
-      # TODO add info
-      NewRelic::Agent.notice_error(e) if defined?(NewRelic::Agent)
+      NewRelic::Agent.notice_error(e, custom_params: info) if defined?(NewRelic::Agent)
 
       # TODO remove in next version
       # don't worry about adding info
