@@ -29,7 +29,7 @@ You can add extra context with:
 Errbase.report(e, {username: "hello"})
 ```
 
-> Context is not supported for Google Stackdriver (New Relic only supported on master)
+> Context is not supported for Google Stackdriver
 
 ## Installation
 
