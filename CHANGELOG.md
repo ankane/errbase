@@ -1,3 +1,7 @@
+## 0.2.1 (unreleased)
+
+- Added support for `sentry-ruby` gem
+
 ## 0.2.0 (2019-10-28)
 
 - Added context to New Relic
