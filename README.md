@@ -31,7 +31,7 @@ Errbase.report(e, {username: "hello"})
 
 > Context is not supported for Google Stackdriver
 
-[![Build Status](https://github.com/ankane/disco/workflows/build/badge.svg?branch=master)](https://github.com/ankane/disco/actions)
+[![Build Status](https://github.com/ankane/errbase/workflows/build/badge.svg?branch=master)](https://github.com/ankane/errbase/actions)
 
 ## Installation
 
