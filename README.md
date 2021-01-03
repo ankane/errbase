@@ -31,6 +31,8 @@ Errbase.report(e, {username: "hello"})
 
 > Context is not supported for Google Stackdriver
 
+[![Build Status](https://github.com/ankane/disco/workflows/build/badge.svg?branch=master)](https://github.com/ankane/disco/actions)
+
 ## Installation
 
 Errbase is designed to be used as a dependency.
