@@ -27,6 +27,8 @@ module Errbase
       Raygun.track_exception(e, custom_data: info) if defined?(Raygun)
 
       Rollbar.error(e, info) if defined?(Rollbar)
+
+      Sentry.capture_exception(e, extra: info) if defined?(Sentry)
     rescue => e
       $stderr.puts "[errbase] Error reporting exception: #{e.class.name}: #{e.message}"
     end
