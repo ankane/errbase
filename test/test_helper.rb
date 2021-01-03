@@ -14,3 +14,4 @@ require "newrelic_rpm"
 # require "raygun4ruby" # raises exception when not configured
 require "rollbar"
 require "sentry-raven"
+require "sentry-ruby"

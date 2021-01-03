@@ -3,7 +3,7 @@ source "https://rubygems.org"
 gemspec
 
 gem "rake"
-gem "minitest"
+gem "minitest", ">= 5"
 
 gem "airbrake"
 gem "appsignal"
