@@ -1,4 +1,4 @@
-## 0.2.1 (unreleased)
+## 0.2.1 (2021-01-03)
 
 - Added support for `sentry-ruby` gem
 
