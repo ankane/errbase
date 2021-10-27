@@ -4,8 +4,12 @@ module Errbase
   class << self
     def report(e, info = {})
       Airbrake.notify(e, info) if defined?(Airbrake)
-
-      Appsignal.send_error(e, info) if defined?(Appsignal)
+      
+      if defined?(Appsignal)
+        Appsignal.send_error(e) do |transaction|
+          transaction.set_tags(info)
+        end
+      end
 
       if defined?(Bugsnag)
         Bugsnag.notify(e) do |report|
