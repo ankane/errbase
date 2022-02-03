@@ -1,3 +1,7 @@
+## 0.2.2 (unreleased)
+
+- Added support for Scout APM
+
 ## 0.2.1 (2021-01-03)
 
 - Added support for `sentry-ruby` gem
