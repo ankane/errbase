@@ -13,6 +13,7 @@ Libraries are automatically detected. Supports:
 - [New Relic](https://newrelic.com/)
 - [Raygun](https://raygun.io/)
 - [Rollbar](https://rollbar.com/)
+- [Scout APM](https://scoutapm.com/)
 - [Sentry](https://getsentry.com/)
 
 ```ruby

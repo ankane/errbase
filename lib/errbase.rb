@@ -28,6 +28,11 @@ module Errbase
 
       Rollbar.error(e, info) if defined?(Rollbar)
 
+      if defined?(ScoutApm::Error)
+        ScoutApm::Context.add(info)
+        ScoutApm::Error.capture(e)
+      end
+
       Sentry.capture_exception(e, extra: info) if defined?(Sentry)
     rescue => e
       $stderr.puts "[errbase] Error reporting exception: #{e.class.name}: #{e.message}"
