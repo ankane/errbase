@@ -13,6 +13,6 @@ require "honeybadger"
 require "newrelic_rpm"
 # require "raygun4ruby" # raises exception when not configured
 require "rollbar"
-require 'scout_apm'
+require "scout_apm"
 require "sentry-raven"
 require "sentry-ruby"
