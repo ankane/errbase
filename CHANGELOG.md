@@ -1,4 +1,4 @@
-## 0.2.2 (unreleased)
+## 0.2.2 (2022-02-03)
 
 - Added support for Scout APM
 - Fixed warning with Appsignal
