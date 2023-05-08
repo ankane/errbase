@@ -1,5 +1,9 @@
 # Errbase
 
+Errbase has been merged into [Safely](https://github.com/ankane/safely) - use that instead.
+
+---
+
 Common exception reporting for a variety of services
 
 Libraries are automatically detected. Supports:
